@@ -72,7 +72,7 @@ const ContactForm = () => {
         or through this form.
       </p>
 
-      <div className="mt-8 max-w-[50rem] mx-auto text-left border p-4 sm:p-8 rounded dark:bg-black/10">
+      <div className="mt-8 max-w-[50rem] mx-auto text-left border p-4 sm:p-8 rounded bg-white/50 dark:bg-black/30">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <div className="flex flex-col gap-4 mb-6">

@@ -21,7 +21,7 @@ const Header = () => {
   const { setTheme } = useTheme();
 
   return (
-    <header className="z=[999] relative">
+    <header className="z-[999] relative">
       <div className="fixed block bottom-[1rem] right-[1rem] md:top-[2rem] sm:right-[2rem] z-5000">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
