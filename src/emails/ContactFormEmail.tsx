@@ -1,4 +1,15 @@
-import React from "react";
+import {
+  Html,
+  Body,
+  Head,
+  Heading,
+  Hr,
+  Container,
+  Preview,
+  Section,
+  Text,
+} from "@react-email/components";
+import { Tailwind } from "@react-email/tailwind";
 
 interface ContactFormEmailProps {
   firstName: string;
@@ -14,17 +25,24 @@ const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
   message,
 }) => {
   return (
-    <div>
-      <h1>Contact form submission</h1>
-      <p>
-        From{" "}
-        <strong>
-          {firstName} {lastName}
-        </strong>
-      </p>
-      <h2>Message</h2>
-      <p>{message}</p>
-    </div>
+    <Html>
+      <Head />
+      <Preview>New message from your portfolio website</Preview>
+      <Tailwind>
+        <Body>
+          <Container>
+            <Section>
+              <Heading>
+                You received the following email from {firstName} {lastName}
+              </Heading>
+              <Text>{message}</Text>
+              <Hr />
+              <Text>The sender&apos;s email is: {email}</Text>
+            </Section>
+          </Container>
+        </Body>
+      </Tailwind>
+    </Html>
   );
 };
 

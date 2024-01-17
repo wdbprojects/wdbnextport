@@ -5,7 +5,14 @@ import { ContactFormSchema } from "@/lib/schemas";
 import { useForm } from "react-hook-form";
 import { ReloadIcon } from "@radix-ui/react-icons";
 import * as z from "zod";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "./ui/form";
 import { sendEmail } from "@/actions/sendEmail";
 import { toast } from "sonner";
 import { Input } from "./ui/input";
@@ -60,6 +67,7 @@ const ContactForm = () => {
                       autoComplete="off"
                     />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               );
             }}
@@ -80,6 +88,7 @@ const ContactForm = () => {
                       autoComplete="off"
                     />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               );
             }}
@@ -100,6 +109,7 @@ const ContactForm = () => {
                       autoComplete="off"
                     />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               );
             }}
@@ -120,6 +130,7 @@ const ContactForm = () => {
                       autoComplete="off"
                     />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               );
             }}
