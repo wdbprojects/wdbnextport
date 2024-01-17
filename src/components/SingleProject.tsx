@@ -16,8 +16,8 @@ type ProjectProps = {
   id: number;
   title: string;
   description: string;
-  imageUrl: string;
-  tags: string;
+  imageUrl: any;
+  tags: any;
 };
 
 const SingleProject = (project: ProjectProps) => {
