@@ -110,7 +110,7 @@ const Intro = () => {
           className="border rounded-full w-[3rem] h-[3rem]"
         >
           <a
-            href="#"
+            href="https://www.linkedin.com/in/webdevbro/"
             target="_blank"
             className="group  p-4 py-3  flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition-all"
           >
@@ -123,7 +123,7 @@ const Intro = () => {
           className="border rounded-full w-[3rem] h-[3rem]"
         >
           <a
-            href="#"
+            href="https://github.com/wdbprojects"
             target="_blank"
             className="group p-4 py-3 text-[1.15rem] flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition-all"
           >
