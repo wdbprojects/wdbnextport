@@ -3,14 +3,11 @@ import { Toaster } from "@/components/ui/sonner";
 
 export default function Home() {
   return (
-    <main className="py-24">
-      <div className="container">
-        <h1 className="text-center text-2xl font-medium mb-8">
-          Testing the form
-        </h1>
+    <>
+      <main className="flex flex-col items-center px-2 sm:px-4 min-h-[2000px]">
         <ContactForm />
-      </div>
+      </main>
       <Toaster richColors position="top-right" closeButton />
-    </main>
+    </>
   );
 }

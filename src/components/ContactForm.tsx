@@ -14,12 +14,18 @@ import {
   FormMessage,
 } from "./ui/form";
 import { sendEmail } from "@/actions/sendEmail";
+import { motion } from "framer-motion";
+import { useInViewHook } from "@/lib/hooks";
 import { toast } from "sonner";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import SectionHeading from "./SectionHeading";
+import { Textarea } from "./ui/textarea";
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(true);
+
+  const { ref } = useInViewHook("Contact", 0.9);
 
   const form = useForm<z.infer<typeof ContactFormSchema>>({
     resolver: zodResolver(ContactFormSchema),
@@ -48,119 +54,140 @@ const ContactForm = () => {
   }, [form.formState.isSubmitting]);
 
   return (
-    <div className="block w-full max-w-[600px] border mx-auto py-8 px-12 bg-slate-100 rounded">
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          {/* FIRST NAME */}
-          <FormField
-            control={form.control}
-            name="firstName"
-            render={({ field }) => {
-              return (
-                <FormItem>
-                  <FormLabel>First Name</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Only letters allowed"
-                      className="bg-white"
-                      autoComplete="off"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              );
-            }}
-          />
-          {/* LAST NAME */}
-          <FormField
-            control={form.control}
-            name="lastName"
-            render={({ field }) => {
-              return (
-                <FormItem>
-                  <FormLabel>Last Name</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Only letters allowed"
-                      className="bg-white"
-                      autoComplete="off"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              );
-            }}
-          />
-          {/* EMAIL */}
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => {
-              return (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Email Address"
-                      className="bg-white"
-                      autoComplete="off"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              );
-            }}
-          />
-          {/* MESSAGE */}
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => {
-              return (
-                <FormItem>
-                  <FormLabel>Message</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Enter your message here..."
-                      className="bg-white"
-                      autoComplete="off"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              );
-            }}
-          />
-          {/* BUTTONS */}
-          <div className="flex justify-between gap-4">
-            <Button
-              type="button"
-              variant="outline"
-              className="flex-1"
-              onClick={() => {
-                form.reset();
-              }}
-            >
-              Reset Form
-            </Button>
-            <Button type="submit" className="flex-1" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <>
-                  <ReloadIcon className="mr-2 h-4 w-4 animate-spin" /> Please
-                  wait...
-                </>
-              ) : (
-                "Submit"
-              )}
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </div>
+    <motion.section
+      ref={ref}
+      id="contact"
+      className="text-center scroll-mt-28 max-w-[50rem] mb-28 sm:mb-40"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
+      <SectionHeading title="Contact" />
+      <p>
+        Please contact me directly at{" "}
+        <a href="mailto:ronyortizop@gmail.com" className="underline">
+          ronyortizop@gmail.com
+        </a>{" "}
+        or through this form.
+      </p>
+
+      <div className="mt-8 max-w-[50rem] mx-auto text-left border p-4 sm:p-8 rounded dark:bg-black/10">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <div className="flex flex-col gap-4 mb-6">
+              {/* FIRST NAME */}
+              <FormField
+                control={form.control}
+                name="firstName"
+                render={({ field }) => {
+                  return (
+                    <FormItem>
+                      <FormLabel>First Name</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          placeholder="Only letters allowed"
+                          className="bg-grey-50 dark:border-none placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                          autoComplete="off"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  );
+                }}
+              />
+              {/* LAST NAME */}
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => {
+                  return (
+                    <FormItem>
+                      <FormLabel>Last Name</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          placeholder="Only letters allowed"
+                          className="bg-grey-50 dark:border-none placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                          autoComplete="off"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  );
+                }}
+              />
+              {/* EMAIL */}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => {
+                  return (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          placeholder="Email Address"
+                          className="bg-grey-50 dark:border-none placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                          autoComplete="off"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  );
+                }}
+              />
+              {/* MESSAGE */}
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => {
+                  return (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          {...field}
+                          placeholder="Enter your message here..."
+                          className="bg-grey-50 dark:border-none placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                          autoComplete="off"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  );
+                }}
+              />
+            </div>
+            {/* BUTTONS */}
+            <div className="flex justify-between gap-4">
+              <Button
+                type="button"
+                variant="outline"
+                className="flex-1"
+                onClick={() => {
+                  form.reset();
+                }}
+              >
+                Reset Form
+              </Button>
+              <Button type="submit" className="flex-1" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <ReloadIcon className="mr-2 h-4 w-4 animate-spin" /> Please
+                    wait...
+                  </>
+                ) : (
+                  "Submit"
+                )}
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </div>
+    </motion.section>
   );
 };
 
