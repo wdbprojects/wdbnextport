@@ -2,7 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import shopit from "/public/shopit.jpg";
+import voila from "/public/voila.jpg";
 import anagram from "/public/anagram.jpg";
 import rues from "/public/rues.jpg";
 
@@ -63,9 +63,9 @@ export const experiencesData = [
 export const projectsData = [
   {
     id: 1,
-    title: "ShopIt",
+    title: "Voila!",
     description:
-      "Robust e-commerce application, developed using the MERN stack, seamlessly integrates MongoDB, Express, React, and Node.js for efficient functionality and performance. Includes best React libraries such as Redux Toolkit, React Hook Form, and TailwindCSS.",
+      "Robust E-Commerce application, developed using the MERN stack, seamlessly integrates MongoDB, Express, React, and Node.js for efficient functionality and performance. Includes best React libraries such as Redux Toolkit, React Hook Form, and TailwindCSS.",
     tags: [
       "React",
       "Redux Toolkit",
@@ -73,8 +73,13 @@ export const projectsData = [
       "MongoDB",
       "Tailwind / NextUI",
       "React Hook Form",
+      "Cloudinary",
+      "Stripe",
     ],
-    imageUrl: shopit,
+    imageUrl: voila,
+    dataFiles: true,
+    url: "https://rich-pink-brown-bear-gear.cyclic.app/",
+    repo: "https://github.com/wdbprojects/voila24",
   },
   {
     id: 2,
@@ -83,6 +88,7 @@ export const projectsData = [
       "An innovative Full Stack Social Media App, leveraging React and Appwrite, seamlessly unites an intuitive user interface with robust backend capabilities, delivering an engaging and dynamic social experience for users.",
     tags: ["React", "Appwrite", "Tailwind", "React Query"],
     imageUrl: anagram,
+    dataFiles: false,
   },
   {
     id: 3,
@@ -91,6 +97,7 @@ export const projectsData = [
       "As part of a team of developers, this application, powered by React, Nest.js, and PostgreSQL, efficiently stores, sorts, and displays health center data. Seamlessly blending frontend and backend technologies, it offers a user-friendly interface for streamlined data management.",
     tags: ["React", "React Hook Forms", "Redux Toolkit"],
     imageUrl: rues,
+    dataFiles: false,
   },
 ] as const;
 
