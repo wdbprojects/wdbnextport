@@ -89,6 +89,8 @@ export const projectsData = [
     tags: ["React", "Appwrite", "Tailwind", "React Query"],
     imageUrl: anagram,
     dataFiles: false,
+    url: "",
+    repo: "",
   },
   {
     id: 3,
@@ -98,6 +100,8 @@ export const projectsData = [
     tags: ["React", "React Hook Forms", "Redux Toolkit"],
     imageUrl: rues,
     dataFiles: false,
+    url: "",
+    repo: "",
   },
 ] as const;
 

@@ -15,7 +15,11 @@ const Projects = () => {
       <SectionHeading title="Projects" />
       <div className="flex flex-col gap-8">
         {projectsData.map((project) => {
-          return <SingleProject key={project.id} {...project} />;
+          return (
+            <>
+              <SingleProject key={project.id} {...project} />
+            </>
+          );
         })}
       </div>
     </section>
