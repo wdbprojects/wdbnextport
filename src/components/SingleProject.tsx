@@ -24,6 +24,8 @@ type ProjectProps = {
   imageUrl: any;
   tags: any;
   dataFiles: Boolean;
+  url: string;
+  repo: string;
 };
 
 const SingleProject = (project: ProjectProps) => {
