@@ -78,7 +78,7 @@ export const projectsData = [
     ],
     imageUrl: voila,
     dataFiles: true,
-    url: "https://salmon-walrus-sock.cyclic.app/",
+    url: "https://voilastore.cyclic.app/",
     repo: "https://github.com/wdbprojects/voila24",
   },
   {
