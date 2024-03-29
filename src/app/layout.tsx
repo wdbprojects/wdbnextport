@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} relative pt-28 sm:pt-36 overflow-x-hidden`}
+        className={`${inter.className} relative pt-28 sm:pt-36 overflow-x-hidden w-full`}
       >
-        <div className="bg-[#FBE2E3] dark:bg-[#20171e] absolute -z-10 top-[-6rem] right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] "></div>
-        <div className="bg-[#DBD7FB] dark:bg-[#25242b] absolute -z-10 top-[-1rem] left-[11rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] "></div>
+        <div className="hidden sm:block bg-[#FBE2E3] dark:bg-[#20171e] absolute -z-10 top-[-6rem] right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] "></div>
+        <div className="hidden sm:block bg-[#DBD7FB] dark:bg-[#25242b] absolute -z-10 top-[-1rem] left-[11rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
         <ActiveSectionContextProvider>
           <ThemeProvider
             attribute="class"
