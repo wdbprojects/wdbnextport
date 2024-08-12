@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import voila from "/public/voila.jpg";
 import anagram from "/public/anagram.jpg";
+import flowjobs from "/public/flowjobs.png";
 import rues from "/public/rues.jpg";
 
 export const links = [
@@ -83,14 +84,25 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Anagram",
+    title: "Flow Jobs",
     description:
-      "An innovative Full Stack Social Media App, leveraging React and Appwrite, seamlessly unites an intuitive user interface with robust backend capabilities, delivering an engaging and dynamic social experience for users.",
-    tags: ["React", "Appwrite", "Tailwind", "React Query"],
-    imageUrl: anagram,
-    dataFiles: false,
-    url: "",
-    repo: "",
+      "This web application revolutionizes job searching and posting with its intuitive interface and robust functionality. Built on Next.js 14, it leverages server actions for efficient data fetching, integrating seamlessly with React Hook Form and Zod for dynamic form handling and validation. The design is meticulously crafted using Shadcn and Tailwind CSS, ensuring a modern and responsive user experience. Authentication is handled securely through Cerk, while the backend relies on PostgreSQL and Prisma for reliable data storage and management. Deployed on Vercel, this application offers a seamless blend of performance, security, and ease of use, making job hunting and posting an effortless task.",
+    tags: [
+      "React",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "React Hook Form",
+      "Zod",
+      "TailwindCSS / ShadCN",
+      "Vercel",
+      "Server Actions",
+      "Custom Smart Search",
+    ],
+    imageUrl: flowjobs,
+    dataFiles: true,
+    url: "https://flowjobs-rho.vercel.app/",
+    repo: "https://github.com/wdbprojects/stevejobs",
   },
   {
     id: 3,
