@@ -79,7 +79,7 @@ export const projectsData = [
     ],
     imageUrl: voila,
     dataFiles: true,
-    url: "https://https://voila24.onrender.com/",
+    url: "https://voila24.onrender.com/",
     repo: "https://github.com/wdbprojects/voila24",
   },
   {
