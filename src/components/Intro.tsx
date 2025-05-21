@@ -55,16 +55,17 @@ const Intro = () => {
       </div>
       {/* PROFILE TEXT */}
       <motion.h1
-        className="mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-2xl"
+        className="mb-10 mt-4 px-4 text-xl font-normal !leading-[1.5] sm:text-xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, I am Ronaldo, a seasoned front-end{" "}
-        <strong>React Web Developer</strong> with
-        <strong> 6 years</strong> of expertise and a strong foundation in
-        <span className="underline"> backend technologies</span>. My aim is to
-        craft robust applications, employing cutting-edge solutions for an
-        optimal user experience.
+        MBA-Educated Professional Turned Skilled Web & App Developer with over
+        10 years of corporate leadership experience and 8+ years in full-stack
+        development, delivering high-impact digital solutions. Leveraged strong
+        analytical and strategic skills from an elite MBA program to excel in
+        JavaScript, React, Node.js, and React Native for mobile app development
+        (iOS/Android). Proven ability to bridge business acumen with technical
+        expertise
       </motion.h1>
       {/* CALL TO ACTION */}
       <motion.div

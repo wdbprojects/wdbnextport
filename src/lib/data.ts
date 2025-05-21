@@ -36,28 +36,121 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Frontend Developer - React",
+    title: "Full-stack Developer",
+    company: "FactumX",
     location: "La Paz, Bolivia",
-    description:
-      "As an intermediate React developer, I collaborated with senior colleagues to develop a large database application using the MERN stack. Under pressure, I consistently met deadlines, ensuring delivery of high-quality results. Utilizing agile methodologies and Trello, I managed CRUD operations on multiple APIs using Redux Toolkit and optimized the UI with Material UI Datasets.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2022 - present",
-  },
-  {
-    title: "Web Developer [MAMP - WordPress / MERN]",
-    location: "La Paz, Bolivia",
-    description:
-      "Designed and developed custom websites, e-commerce solutions and other applications for small businesses. Technologies used include JavaScript, React, Node.js, Express, MongoDB, and popular SQL databases. Previously I used other technologies such as PHP, MySQL and the WordPress API.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2017 - 2022",
-  },
-  {
-    title: "Marketing/Business Inteligence",
-    location: "Austin, TX / La Paz - Bolivia",
-    description:
-      "Strategic marketer with expertise in digital marketing, CRM development, and sales, specializing in tech solutions. Proven track record in improving brand visibility and sales performance in the IT sector.",
+    description: [
+      {
+        id: 1,
+        text: "Collaborated with senior developers to build a scalable database application using React and modern web technologies",
+      },
+      {
+        id: 2,
+        text: "Delivered production-ready features under tight deadlines while maintaining code quality and performance",
+      },
+      {
+        id: 3,
+        text: "Implemented efficient CRUD operations across multiple APIs using Redux Toolkit for state management",
+      },
+      {
+        id: 4,
+        text: "Optimized user interfaces with Material UI components, improving usability and visual consistency",
+      },
+    ],
     icon: React.createElement(FaReact),
-    date: "2012 - 2016",
+    date: "Jan 2019 - present",
+  },
+  {
+    title: "Front-end Developer",
+    company: "Freelance",
+    location: "La Paz, Bolivia",
+    description: [
+      {
+        id: 1,
+        text: "Developed custom websites and e-commerce solutions for small businesses using modern JavaScript stack (React, Node.js, Express, MongoDB)",
+      },
+      {
+        id: 2,
+        text: "Built full-stack applications with both NoSQL (MongoDB) and relational SQL databases",
+      },
+      {
+        id: 3,
+        text: "Integrated with various APIs and CMS platforms including WordPress",
+      },
+      {
+        id: 4,
+        text: "Leveraged previous experience with PHP, MySQL, and WordPress for legacy system support",
+      },
+      {
+        id: 5,
+        text: "Delivered tailored web solutions that addressed specific business needs and requirements",
+      },
+    ],
+    icon: React.createElement(FaReact),
+    date: "Aug 2014 - Dec 2018",
+  },
+  {
+    title: "Business Inteligence",
+    company: "Grupo Santillana",
+    location: "La Paz - Bolivia",
+    description: [
+      {
+        id: 1,
+        text: "Designed and implemented a custom CRM system to enhance customer relationship management and operational efficiency",
+      },
+      {
+        id: 2,
+        text: "Managed annual revenue budgets by product across 5 Bolivian cities, ensuring financial alignment with business goals",
+      },
+      {
+        id: 3,
+        text: "Monitored real-time sales performance via CRM, generating strategic reports to support data-driven decision-making across departments",
+      },
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "Apr 2007 - Jun 2013",
+  },
+  {
+    title: "Sales Representative",
+    company: "Dell Inc.",
+    location: "Austin, TX",
+    description: [
+      {
+        id: 1,
+        text: "B2B Technology Sales: Sold premium computing and networking solutions to SMBs across Mexico and the Caribbean through consultative, needs-based selling",
+      },
+      {
+        id: 2,
+        text: "Customer-Centric Approach: Conducted in-depth needs assessments to recommend tailored IT solutions, leveraging expert product knowledge to drive decision-making",
+      },
+      {
+        id: 3,
+        text: "Top-Performing Results: Exceeded sales quotas consistently, ranking among top performers",
+      },
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2004 - Jul 2006",
+  },
+  {
+    title: "Accounting & Budget Clerk",
+    company: "American Airlines",
+    location: "La Paz - Bolivia",
+    description: [
+      {
+        id: 1,
+        text: "Budget Management: Develop and prepare the airline’s expense budget for Bolivia",
+      },
+      {
+        id: 2,
+        text: "Financial Reconciliation: Conduct monthly and annual variance analysis and reporting for corporate headquarters",
+      },
+      {
+        id: 3,
+        text: "Vendor & Payment Processing: Handle daily vendor payments and ensure accurate recording in SAP software",
+      },
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "Apr 1996 - May 2000",
   },
 ] as const;
 

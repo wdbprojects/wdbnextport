@@ -17,7 +17,7 @@ const About = () => {
     >
       <SectionHeading title="About me" />
       <p className="mb-3 text-sm leading-6">
-        With over six years of dedicated experience in web development, I am a
+        With over eight years of dedicated experience in web development, I am a
         seasoned professional specializing in frontend technologies,
         particularly React. My proficiency extends beyond the client side,
         encompassing a solid command of backend technologies such as Node.js,

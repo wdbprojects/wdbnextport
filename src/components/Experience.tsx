@@ -20,7 +20,7 @@ const Experience = () => {
     <section
       ref={ref}
       id="experience"
-      className="text-center scroll-mt-28 max-w-[50rem] mb-28 sm:mb-40"
+      className="text-center scroll-mt-28 w-full mb-28 sm:mb-40"
     >
       <SectionHeading title="Experience" />
 
@@ -61,12 +61,21 @@ const Experience = () => {
               <h3 className="font-semibold !capitalize dark:text-gray-200">
                 {item.title}
               </h3>
-              <p className="!font-normal !mt-0 dark:text-gray-400">
-                {item.location}
-              </p>
-              <p className="!text-sm !font-light !mt-1 !text-gray-500">
-                {item.description}
-              </p>
+              <div className="flex items-center justify-start gap-4 text-sm">
+                <span>{item.company}</span>
+                {" | "}
+                <span>{item.location}</span>
+              </div>
+
+              <ul className="!text-sm !font-light !mt-2 !text-gray-500 space-y-2">
+                {item.description.map((desc) => {
+                  return (
+                    <li key={desc.id} className="list-disc">
+                      {desc.text}
+                    </li>
+                  );
+                })}
+              </ul>
             </VerticalTimelineElement>
           );
         })}
