@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ContactFormSchema } from "@/lib/schemas";
 import { useForm } from "react-hook-form";
-import { ReloadIcon } from "@radix-ui/react-icons";
+
 import * as z from "zod";
 import {
   Form,
@@ -21,6 +21,7 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import SectionHeading from "./SectionHeading";
 import { Textarea } from "./ui/textarea";
+import { RefreshCcw } from "lucide-react";
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(true);
@@ -176,7 +177,7 @@ const ContactForm = () => {
               <Button type="submit" className="flex-1" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <>
-                    <ReloadIcon className="mr-2 h-4 w-4 animate-spin" /> Please
+                    <RefreshCcw className="mr-2 h-4 w-4 animate-spin" /> Please
                     wait...
                   </>
                 ) : (
